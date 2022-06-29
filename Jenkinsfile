@@ -17,5 +17,13 @@ pipeline {
            sh "mvn -f ajiolux/pom.xml clean package"
            }
           }
+        
+        stage ('Deploy') {
+      steps {
+        script {
+          deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.233.192.177:8080/')], contextPath: '', onFailure: false, war: 'ajiolux/target/*.war' 
+        }
+      }
+    }
     }
 }
