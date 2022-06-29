@@ -12,7 +12,7 @@ pipeline {
            }
           }
           
-           stage("build"){
+           stage("build ."){
           steps{
            sh "mvn -f ajiolux/pom.xml clean package"
            }
