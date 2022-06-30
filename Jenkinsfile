@@ -21,7 +21,7 @@ pipeline {
         stage ('Deploy') {
       steps {
         script {
-          deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.233.192.177:8080/')], contextPath: '', onFailure: false, war: 'ajiolux/target/*.war' 
+          deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.127.71.50:8080//')], contextPath: '', onFailure: false, war: 'ajiolux/target/*.war' 
         }
       }
     }
