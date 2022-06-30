@@ -6,7 +6,7 @@ pipeline {
   }
 
     stages {
-       stage("Git Checkout"){
+       stage("Git Checkout."){
           steps{
            git 'https://github.com/sriharshabalasa/ajio.git'
            }
